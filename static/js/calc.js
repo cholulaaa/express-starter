@@ -87,35 +87,35 @@ $(function() {
 
   // WRITE CODE HERE for sub,mul,div,mod
 
- $('#add').click(function()) {
+ $('#add').click(function() {
     if (notLastOp) {};
-    var outputText = S('#outputText').text() + '+';
-    }
+    var outputText = $('#output').text() + '+';
     $('#output').text(outputText);
+  });
 
-  $('#sub').click(function()) {
+  $('#sub').click(function() {
     if (notLastOp) {};
-    var outputText = S('#outputText').text() + '-';
-    }
+    var outputText = $('#output').text() + '-';
     $('#output').text(outputText);
+  });
 
-  $('#mul').click(function()) {
+  $('#mul').click(function() {
     if (notLastOp) {};
-    var outputText = S('#outputText').text() + 'x';
-    }
+    var outputText = $('#output').text() + 'x';
     $('#output').text(outputText);
+  });
 
-  $('#div').click(function()) {
+  $('#div').click(function() {
     if (notLastOp) {};
-    var outputText = S('#outputText').text() + '/';
-    }
+    var outputText = $('#output').text() + '/';
     $('#output').text(outputText);
+  });
 
-  $('#mod').click(function()) {
+  $('#mod').click(function() {
     if (notLastOp) {};
-    var outputText = S('#outputText').text() + '%';
-    }
+    var outputText = $('#output').text() + '%';
     $('#output').text(outputText);
+  });
 
   $('#sqrt').click(function() {
     var outputText = $('#output').text();
@@ -127,15 +127,15 @@ $(function() {
   $('#square').click(function() {
     var outputText = $('#output').text();
     var outputNum = parseFloat(eval(outputText));
-    var newNum = Math.pow(outputNum);
+    var newNum = Math.pow(outputNum,2);
     $('#output').text(newNum);
   });
 
   $('#equals').click(function() {
     var outputText = $('#output').text();
-    var outputNum = parseFloat(eval(outputText));
-    var res = Math.eval('output');
-    $('#output').text(res);
+    var outputNum = parseFloat(eval($('#output').text()));
+    var res = eval('output');
+    $('#output').text(outputNum);
   });
 
   $('#dot').click(function() {
