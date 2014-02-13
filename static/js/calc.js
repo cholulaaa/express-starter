@@ -31,7 +31,7 @@ $(function() {
   $('#three').click(function() {
     var outputText = $('#output').text() + '3';
     if (outputText === '03') {
-      outputText = '1';
+      outputText = '3';
     }
     $('#output').text(outputText);
   });
