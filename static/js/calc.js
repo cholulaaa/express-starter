@@ -45,7 +45,6 @@ $(function() {
     }
     $('#output').text(outputText);
   });
-    // FIXME
 
   // WRITE CODE HERE for buttons 5-9
   $('#five').click(function() {
@@ -54,6 +53,7 @@ $(function() {
       outputText = '5';
     }
     $('#output').text(outputText);
+  });
 
   $('#six').click(function() {
     var outputText = $('#output').text() + '6';
@@ -61,6 +61,7 @@ $(function() {
       outputText = '6';
     }
     $('#output').text(outputText);
+  });
 
     $('#seven').click(function() {
     var outputText = $('#output').text() + '7';
@@ -68,6 +69,7 @@ $(function() {
       outputText = '7';
     }
     $('#output').text(outputText);
+  });
 
   $('#eight').click(function() {
     var outputText = $('#output').text() + '8';
@@ -75,6 +77,7 @@ $(function() {
       outputText = '8';
     }
     $('#output').text(outputText);
+  });
 
   $('#nine').click(function() {
     var outputText = $('#output').text() + '9';
@@ -82,6 +85,7 @@ $(function() {
       outputText = '9';
     }
     $('#output').text(outputText);
+  });
 
   // WRITE CODE HERE for sub,mul,div,mod
 
@@ -130,8 +134,9 @@ $(function() {
   });
 
   $('#equals').click(function() {
-    // FIXME
-    var res = eval('output');
+    var outputText = $('#output').text();
+    var outputNum = parseFloat(eval(outputText));
+    var res = Math.eval('output');
     $('#output').text(res);
   });
 
