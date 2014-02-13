@@ -25,7 +25,6 @@ $(function() {
     if (outputText === '02') {
       outputText = '2';
     }
-    // FIXME
     $('#output').text(outputText);
   });
 
@@ -34,7 +33,6 @@ $(function() {
     if (outputText === '03') {
       outputText = '1';
     }
-    // FIXME
     $('#output').text(outputText);
   });
 
