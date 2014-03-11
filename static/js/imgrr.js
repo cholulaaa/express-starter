@@ -17,6 +17,7 @@ $('#toggle_img').click(function()
 $('#change_img').click(function() 
 {
 	alert($('#new_img_file').val());
+
 });
 
 
@@ -24,6 +25,7 @@ $('#change_img').click(function()
 // Problem 4 (Find the Source) -------------------------------------------------
 $('.clickable').click(function() {
   // WRITE CODE HERE
+  $(this).attr('width', '200px');
 
   
 });
