@@ -83,9 +83,10 @@ $('#p8').click(function() {
       context.rect(100, 245, 100, 100);
       context.fillStyle = 'yellow';
       context.fill();
-      context.lineWidth = 4;
+      context.lineWidth = 2;
       context.strokeStyle = 'blue';
       context.stroke();
+      context.strokeStyle='black'
     context.closePath(); 
   
   });
