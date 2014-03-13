@@ -39,7 +39,11 @@ app.get('/imgrr', function(req, res) {
 });
 
 app.get('/canvas', function(req, res) {
-  res.render('canvas.html', { });
+  res.render('canvas.html', { });çç
+});
+
+app.get('/funcs', function(req, res) {
+  res.render('funcs.html', { });çç
 });
 
 ///////////////////////////////////////////////////////////////////////////////
