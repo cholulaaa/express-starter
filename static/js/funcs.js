@@ -19,10 +19,8 @@ $(document).ready(function() {
   };
 
   var drawCircle = function(x, y, radius, color) {
-    context.beginPath();
-    context.strokeStyle = color;
     context.arc(x, y, radius, 0, 2*Math.PI);
-    context.stroke();
+    
   };
 
   // Write drawTriplet function here
