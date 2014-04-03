@@ -39,15 +39,19 @@ app.get('/imgrr', function(req, res) {
 });
 
 app.get('/canvas', function(req, res) {
-  res.render('canvas.html', { });çç
+  res.render('canvas.html', { });
 });
 
 app.get('/funcs', function(req, res) {
-  res.render('funcs.html', { });çç
+  res.render('funcs.html', { });
 });
 
 app.get('/ball', function(req, res) {
-  res.render('ball.html', { });çç
+  res.render('ball.html', { });
+});
+
+app.get('/chain-reaction', function(req, res) {
+  res.render('chain_reaction.html', { });
 });
 
 ///////////////////////////////////////////////////////////////////////////////
