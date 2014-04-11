@@ -42,8 +42,8 @@ for(var i = 0; i < numBalls; i++){
       x: width * Math.random(),
       y: height * Math.random(),
       radius: 10,
-      vx: 10,
-      vy: 10
+      vx: 10 * Math.random(),
+      vy: 10 * Math.random()
     };
   balls.push(b0);
 };
@@ -88,8 +88,8 @@ for(var i = 0; i < numBalls; i++){
       x: e.pageX - $(this).offset().left,
       y: e.pageY - $(this).offset().top,
       radius: 50,
-      vx: 10,
-      vy: 5
+      vx: 10 * Math.random(),
+      vy: 10 * Math.random()
     });
     // PUT STUFF HERE
     context.fillStyle= 'black';
