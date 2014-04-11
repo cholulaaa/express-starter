@@ -81,16 +81,22 @@ for(var i = 0; i < numBalls; i++){
   };
   
 
-
-
-
   // Handle a canvas click event
   $('#game_canvas').click(function(e) {
     // Find the mouse x and y relative to the top-left corner of the canvas
-    var x = e.pageX - $(this).offset().left;
-    var y = e.pageY - $(this).offset().top;
+    balls.push({
+      x: e.pageX - $(this).offset().left,
+      y: e.pageY - $(this).offset().top,
+      radius: 50,
+      vx: 10,
+      vy: 5
+    });
     // PUT STUFF HERE
-  });
+    context.fillStyle= 'black';
+    context.beginPath();
+    context.arc(x, y, 20, 0, 2 * Math.PI);
+    context.fill();
+  }); 
 
   updateGame();
 });
