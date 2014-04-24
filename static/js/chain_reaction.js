@@ -6,42 +6,18 @@ $(document).ready(function() {
   var height = canvas.height;
 
   // PUT STUFF HERE
-var numBalls = 50;
+var numBalls = 5;
 
+var reactions = [];
 var balls = [];
-    /*var b0 = {
-      x: 20,
-      y: 20,
-      radius: 20,
-      vx: 10,
-      vy: 10
-    };
-    var b1 = {
-      x: 140,
-      y: 40,
-      radius: 40,
-      vx: 5,
-      vy: 5
-    };
-    var b2 = {
-      x: 255,
-      y: 155,
-      radius: 35,
-      vx: 10,
-      vy: 5
-    };
-    balls.push(b0);
-    balls.push(b1);
-    balls.push(b2);
-  //alert(balls.length)
-*/
+
 
 
 for(var i = 0; i < numBalls; i++){
   var b0 = {
       x: width * Math.random(),
       y: height * Math.random(),
-      radius: 10,
+      radius: 20,
       vx: 10 * Math.random(),
       vy: 10 * Math.random()
     };
@@ -76,6 +52,14 @@ for(var i = 0; i < numBalls; i++){
     context.stroke();
   }
 
+  for(var i = 0; i < reactions.length; i++){
+    context.beginPath();
+    context.strokeStyle = 'blue';
+    context.arc(reactions[i].x, reactions[i].y, reactions[i].radius, 0, 2*Math.PI);
+    context.stroke();
+  }
+
+
   requestAnimationFrame(updateGame);
 
   };
@@ -84,19 +68,25 @@ for(var i = 0; i < numBalls; i++){
   // Handle a canvas click event
   $('#game_canvas').click(function(e) {
     // Find the mouse x and y relative to the top-left corner of the canvas
-    balls.push({
+    var b = {
       x: e.pageX - $(this).offset().left,
+      y: e.pageY - $(this).offset().top,
+      radius: 30,
+      vx: 5,
+      vy: 5 
+    };
+    reactions.push(b);
+
+  }); 
+      /*x: e.pageX - $(this).offset().left,
       y: e.pageY - $(this).offset().top,
       radius: 50,
       vx: 10 * Math.random(),
       vy: 10 * Math.random()
-    });
+    };
+    balls.push(b);*/
     // PUT STUFF HERE
-    context.fillStyle= 'black';
-    context.beginPath();
-    context.arc(x, y, 20, 0, 2 * Math.PI);
-    context.fill();
-  }); 
+
 
   updateGame();
 });
